@@ -1,0 +1,32 @@
+【本程序包是JAVA版本的淘宝网开放平台一站通登陆开发包（GBK版本），由闪电网技术团队友情提供。】
+仅供学习和研究使用，其它用途后果与本技术团队无关！仅供参考！
+
+程序包说明：src目录是java源代码，WebRoot是WEB应用目录
+使用说明：
+1、用Eclipse或MyEclipse新建一个WEB工程项目，编码指定为GBK
+2、将src下面的源文件拷贝到工程的src下面，将WebRoot下面所有文件拷贝到工程下的WebRoot下面
+3、编译，布署到Tomcat下面运行（布署方法略），假设应用叫diantuan
+4、在本地浏览器上输入：http://localhost:8080/diantuan/taobao/call.jsp
+
+注意事项：
+1、请先在淘宝网http://open.taobao.com/dev/index.php上申请新应用
+   申请完将得到的KEY和SECRET写到com.taobao.TaobaoConfig指定变量里面即可
+    //淘宝一站通KEY和密钥
+    public static final String taobaoKey ="12328779";	
+    public static final String taobaoSecret ="df459f5bcde862318f2264a6b6caefa4";
+
+2、程序返回地址及相关配置：在com.taobao.TaobaoConfig中修改
+	
+   //请求返回地址
+   public static final String redirect_uri  ="http://www.shandiant.com/taobao/callback.jsp";
+		
+3、另附一个程序编码转换工具，可以转成任意编码的工程文件。
+   ChangeFileEncode.java
+   使用方法：修改里面的srcpath为源文件目录，despath为输出文件目录。再将待转换的文件夹拷贝到srcpath下面，执行即可。
+   
+   
+【友情支援】：邮箱：yuhm@shandiant.com   QQ:1150630147  
+【效果网址】：http://www.shandiant.com/front/login.jsp
+资源下载地址：http://seaforce.download.csdn.net/
+
+ 有问题欢迎指正。
